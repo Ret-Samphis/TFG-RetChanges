@@ -1,10 +1,10 @@
 {
   "enableDropsForNonPlayer": true,
   "enableCrashExplosion": true,
-  "enableCrashBlockDestruction": false,
-  "enableCrashFire": false,
-  "crashExplosionRadius": 2.0,
-  "crashDamage": 2.0,
+  "enableCrashBlockDestruction": true,
+  "enableCrashFire": true,
+  "crashExplosionRadius": 9.0,
+  "crashDamage": 9.0,
   "preventKillThroughCrash": true,
   "healthBarRow": 0,
   "damagePerHealthPoint": 30,
@@ -12,7 +12,7 @@
   "useThirdPersonByDefault": true,
   "enableTrails": true,
   "renderDistance": 192.0,
-  "fuelConsumption": 1.0,
+  "fuelConsumption": 5.0,
   "windClearWeather": 1.0,
   "windRainWeather": 3.0,
   "windThunderWeather": 3.0,
@@ -28,7 +28,7 @@
   "dropAircraft": true,
   "dropInventory": true,
   "dropUpgrades": false,
-  "regenerateHealthEveryNTicks": 0,
+  "regenerateHealthEveryNTicks": 120,
   "requireShiftForRepair": false,
   "bombBayEntity": {
     "minecraft:egg": "tfc:chicken"

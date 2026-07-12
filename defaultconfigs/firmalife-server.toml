@@ -92,13 +92,13 @@
 	traitRancid_smokedModifier = 2.0
 	#The modifier for the 'Shelved' food trait. Values less than 1 extend food lifetime, values greater than one decrease it. A value of zero stops decay.
 	#Range: 0.0 ~ 1.7976931348623157E308
-	traitShelvedModifier = 0.4
+	traitShelvedModifier = 0.2
 	#The modifier for the 'Shelved_2' food trait. Values less than 1 extend food lifetime, values greater than one decrease it. A value of zero stops decay.
 	#Range: 0.0 ~ 1.7976931348623157E308
-	traitShelved_2Modifier = 0.35
+	traitShelved_2Modifier = 0.15
 	#The modifier for the 'Shelved_3' food trait. Values less than 1 extend food lifetime, values greater than one decrease it. A value of zero stops decay.
 	#Range: 0.0 ~ 1.7976931348623157E308
-	traitShelved_3Modifier = 0.25
+	traitShelved_3Modifier = 0.05
 	#The modifier for the 'Hung' food trait. Values less than 1 extend food lifetime, values greater than one decrease it. A value of zero stops decay.
 	#Range: 0.0 ~ 1.7976931348623157E308
 	traitHungModifier = 0.35
