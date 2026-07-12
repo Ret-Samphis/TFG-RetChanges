@@ -83,13 +83,15 @@
 	quests: [
 		{
 			dependencies: [
-				"7B045998769930F0"
+				"3A9B7C4D8E2F1A5B"
 				"55FDF06AC0C01D0B"
 			]
 			description: [
 				"{quests.steam_age.basic_millstone.desc.1}"
 				"{@pagebreak}"
 				"{quests.steam_age.basic_millstone.desc.2}"
+				"{@pagebreak}"
+				"{quests.steam_age.basic_millstone.desc.3}"
 			]
 			id: "48C1E980F7D64317"
 			size: 1.0d
@@ -101,6 +103,51 @@
 			}]
 			title: "{quests.steam_age.basic_millstone.title}"
 			x: -19.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["14710C5B4981CECC"]
+			description: ["{quests.steam_age.crushing_this.desc}"]
+			id: "3A9B7C4D8E2F1A5B"
+			subtitle: "{quests.steam_age.crushing_this.subtitle}"
+			tasks: [{
+				id: "1B3C4D5E6F7A8B9C"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(forge:crushed_ores)"
+					}
+				}
+				title: "{quests.tasktype.item.any} #forge:crushed_ores"
+				type: "item"
+				weak_nbt_match: true
+			}]
+			title: "{quests.steam_age.crushing_this.title}"
+			x: -17.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3A9B7C4D8E2F1A5B"]
+			description: ["{quests.steam_age.crushing_this_part2.desc}"]
+			icon: "minecraft:water_bucket"
+			id: "4B5C6D7E8F9A0B1C"
+			subtitle: "{quests.steam_age.crushing_this_part2.subtitle}"
+			tasks: [{
+				id: "2C3D4E5F6A7B8C9D"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(forge:dusts)"
+					}
+				}
+				title: "{quests.tasktype.item.any} #forge:dusts"
+				type: "item"
+				weak_nbt_match: true
+			}]
+			title: "{quests.steam_age.crushing_this_part2.title}"
+			x: -15.0d
 			y: 0.0d
 		}
 		{
@@ -445,10 +492,7 @@
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"5917B0D4708BF534"
-				"6100B3C732E379AA"
-			]
+			dependencies: ["6100B3C732E379AA"]
 			description: ["{quests.steam_age.crushing_wheel.desc}"]
 			id: "4F3D0D746D26B59F"
 			optional: true
@@ -852,10 +896,7 @@
 			y: 17.25d
 		}
 		{
-			dependencies: [
-				"5917B0D4708BF534"
-				"6100B3C732E379AA"
-			]
+			dependencies: ["1E8CC993E0251828"]
 			description: ["{quests.steam_age.centrifuge.desc}"]
 			id: "19A1D52A7F550478"
 			optional: true
@@ -871,10 +912,7 @@
 			y: 11.5d
 		}
 		{
-			dependencies: [
-				"2C35D4E01AEC02AA"
-				"6100B3C732E379AA"
-			]
+			dependencies: ["6CF7DCC996BACBFA"]
 			description: ["{quests.steam_age.vibrating_table.desc}"]
 			id: "1E8CC993E0251828"
 			optional: true
@@ -939,10 +977,7 @@
 			y: 18.0d
 		}
 		{
-			dependencies: [
-				"46FA9DD4755A5548"
-				"6100B3C732E379AA"
-			]
+			dependencies: ["19A1D52A7F550478"]
 			description: ["{quests.steam_age.steam_furnace.desc}"]
 			id: "799288FB7A4DCA11"
 			subtitle: "{quests.steam_age.steam_furnace.subtitle}"
@@ -1521,10 +1556,7 @@
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"46FA9DD4755A5548"
-				"6100B3C732E379AA"
-			]
+			dependencies: ["4F3D0D746D26B59F"]
 			description: ["{quests.steam_age.steam_macerator.desc}"]
 			id: "6CF7DCC996BACBFA"
 			optional: true

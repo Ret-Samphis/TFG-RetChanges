@@ -60,7 +60,7 @@
 			rotation: 0.0d
 			width: 2.0d
 			x: -6.5d
-			y: -8.5d
+			y: -9.0d
 		}
 		{
 			height: 2.0d
@@ -82,34 +82,52 @@
 	order_index: 0
 	quest_links: [
 		{
-			id: "2425C5C5109FD90C"
-			linked_quest: "48C1E980F7D64317"
+			id: "768E3275B9E3EE1A"
+			linked_quest: "14710C5B4981CECC"
 			x: -6.5d
 			y: -13.0d
 		}
 		{
-			id: "098E410F9E564854"
-			linked_quest: "5E4FC017E09ACF44"
+			id: "5A6B7C8D9E0F1A2B"
+			linked_quest: "3A9B7C4D8E2F1A5B"
+			x: -5.5d
+			y: -13.0d
+		}
+		{
+			id: "C7D8E9F0A1B2C3D4"
+			linked_quest: "48C1E980F7D64317"
+			x: -3.0d
+			y: -13.0d
+		}
+		{
+			id: "6A7B8C9D0E1F2A3B"
+			linked_quest: "4B5C6D7E8F9A0B1C"
+			x: 6.0d
+			y: -13.0d
+		}
+		{
+			id: "25F34E3A8D33CF09"
+			linked_quest: "0D39D83AA5F9D543"
 			x: -6.5d
 			y: -11.0d
 		}
 		{
-			id: "047EB0CB2FDCC07B"
-			linked_quest: "6CF7DCC996BACBFA"
-			x: -6.5d
-			y: -9.5d
-		}
-		{
-			id: "7EFCFBCD5D01A9C2"
-			linked_quest: "59F7F7A8C76DE31C"
-			x: -5.5d
-			y: -9.5d
+			id: "098E410F9E564854"
+			linked_quest: "5E4FC017E09ACF44"
+			x: -2.5d
+			y: -11.0d
 		}
 		{
 			id: "5304E40808C81257"
 			linked_quest: "4F3D0D746D26B59F"
 			x: -6.5d
-			y: -8.5d
+			y: -9.0d
+		}
+		{
+			id: "047EB0CB2FDCC07B"
+			linked_quest: "6CF7DCC996BACBFA"
+			x: -3.0d
+			y: -9.0d
 		}
 		{
 			id: "0ADE673FEEDFDA1D"
@@ -156,44 +174,26 @@
 		{
 			id: "579B261E3FDD2C96"
 			linked_quest: "799288FB7A4DCA11"
-			x: -5.5d
-			y: -8.5d
-		}
-		{
-			id: "25F34E3A8D33CF09"
-			linked_quest: "0D39D83AA5F9D543"
-			x: -5.5d
-			y: -11.0d
+			x: 12.0d
+			y: -9.0d
 		}
 		{
 			id: "0EB72D703E72A46D"
 			linked_quest: "0D39D83AA5F9D543"
-			x: 0.0d
+			x: 0.5d
 			y: -11.0d
 		}
 		{
 			id: "7554B55718546232"
-			linked_quest: "0D39D83AA5F9D543"
-			x: -2.5d
+			linked_quest: "5E4FC017E09ACF44"
+			x: 1.5d
 			y: -11.0d
-		}
-		{
-			id: "768E3275B9E3EE1A"
-			linked_quest: "14710C5B4981CECC"
-			x: -5.5d
-			y: -13.0d
 		}
 		{
 			id: "21670DA706D747EC"
 			linked_quest: "378F0AFCF95354B2"
 			x: 12.0d
 			y: 3.5d
-		}
-		{
-			id: "127B4DBA5C90C23D"
-			linked_quest: "48C1E980F7D64317"
-			x: -3.0d
-			y: -13.0d
 		}
 		{
 			id: "68F9EF067F3F0F59"
@@ -863,50 +863,6 @@
 			title: "{quests.ore_proc.dust_processed.title}"
 			x: 12.0d
 			y: -17.0d
-		}
-		{
-			dependencies: ["186CFAA5A444ECB3"]
-			description: ["{quests.stone_age.crush_crushed_ore.desc}"]
-			id: "5E4B1B9C1829F855"
-			subtitle: "{quests.stone_age.crush_crushed_ore.subtitle}"
-			tasks: [{
-				disable_toast: true
-				id: "079F2F7C23194D34"
-				item: {
-					Count: 1
-					id: "gtceu:stone_hammer"
-					tag: {
-						Damage: 0
-						DisallowContainerItem: 0b
-						GT.Behaviours: { }
-						GT.Tool: {
-							HarvestLevel: 1
-							MaxDamage: 47
-							ToolSpeed: 5.2f
-						}
-						HideFlags: 2
-					}
-				}
-				type: "item"
-			}]
-			title: "{quests.stone_age.crush_crushed_ore.title}"
-			x: -3.0d
-			y: -15.0d
-		}
-		{
-			dependencies: ["186CFAA5A444ECB3"]
-			description: ["{quests.stone_age.clean_dust.desc}"]
-			icon: "minecraft:water_bucket"
-			id: "6B10099F3F0931B9"
-			size: 1.0d
-			subtitle: "{quests.stone_age.clean_dust.subtitle}"
-			tasks: [{
-				id: "62EF9D1895CA3811"
-				type: "checkmark"
-			}]
-			title: "{quests.stone_age.clean_dust.title}"
-			x: 6.0d
-			y: -15.0d
 		}
 		{
 			description: ["{quests.ore_proc.refined_ore.desc}"]
