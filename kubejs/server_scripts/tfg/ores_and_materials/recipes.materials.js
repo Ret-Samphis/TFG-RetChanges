@@ -375,6 +375,8 @@ function registerTFGMaterialRecipes(event) {
 			processPoorRawOre(event, material)
 			processNormalRawOre(event, material)
 			processRichRawOre(event, material)
+			processCrushingWheels(event, material)
+			processSequencedAssembly(event, material)
 
 			processCrushedOre(event, material)
 			processPurifiedOre(event, material)

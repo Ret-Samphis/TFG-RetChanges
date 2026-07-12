@@ -742,6 +742,50 @@ function removeGTCEURecipes(event) {
 	event.remove({ id: 'gtceu:centrifuge/ender_air_separation' })
 	event.remove({ id: 'gtceu:vacuum_freezer/liquid_ender_air' })
 	event.remove({ id: 'gtceu:distillation_tower/distill_liquid_ender_air' })
+
+	// Nuke ALL Greate auto-integration for ALL macerator recipes (use explicit Create recipes)
+	event.remove({ id: /greate:(milling|crushing)\/integration\/gtceu\/macerator\/.*/ })
+
+	// Remove GTCEu electric furnace & vanilla smelting for ore intermediates → ingot
+	// (keep pure {material}_dust → ingot — that's the final product)
+	event.remove({ id: /gtceu:smelting\/smelt_.*(?:ore|impure|pure|dirty|crushed|purified|refined|raw)(?:_.+)?_to_ingot/ })
+	event.remove({ type: 'minecraft:smelting', input: '#forge:raw_materials' })
+	event.remove({ type: 'minecraft:smelting', input: '#forge:dusts_impure' })
+	event.remove({ type: 'minecraft:smelting', input: '#forge:crushed_ores' })
+	event.remove({ type: 'minecraft:smelting', input: '#forge:crushed_purified_ores' })
+	event.remove({ type: 'minecraft:smelting', input: '#forge:crushed_refined_ores' })
+	event.remove({ type: 'gtceu:electric_furnace', input: '#forge:raw_materials' })
+	event.remove({ type: 'gtceu:electric_furnace', input: '#forge:dusts_impure' })
+
+	// Remove auto-generated GTCEu processing for impure/dirty dust
+	event.remove({ id: /gtceu:macerator\/macerate_.+_dirty_dust_to_dust/ })
+	event.remove({ id: /gtceu:ore_washer\/wash_.+_dirty_dust_to_dust/ })
+	event.remove({ id: /gtceu:centrifuge\/centrifuge_.+_dirty_dust_to_dust/ })
+	event.remove({ id: /gtceu:forge_hammer\/hammer_.+_dirty_dust_to_dust/ })
+
+	// Remove GTCEu raw ore → crushed ore auto-generation (replaced by impure path)
+	event.remove({ id: /gtceu:macerator\/macerate_.+_ore_to_crushed_ore$/ })
+
+	// Remove ore block auto-compression/decompression
+	event.remove({ id: /gtceu:compressor\/compress_.+_to_raw_ore_block/ })
+	event.remove({ id: /gtceu:forge_hammer\/decompress_.+_to_raw_ore/ })
+
+	// Remove Geologic Vulcanizer raw ore processing gas recipes
+	event.remove({ id: /tfg:ore_processing_gas\/ore_proc_gas\/(normal|poor|rich)_.+/ })
+
+	// Remove forge hammer ore block → crushed_ore recipes (clutter from auto-generation)
+	event.remove({ id: /gtceu:forge_hammer\/hammer_.+_ore_to_crushed_ore/ })
+
+	// Create crushed ores (used as purified ore equivalents) — block smelting
+	const CREATE_CRUSHED_ORES = ['create:crushed_raw_copper', 'create:crushed_raw_gold', 'create:crushed_raw_silver', 'create:crushed_raw_tin', 'create:crushed_raw_lead', 'create:crushed_raw_zinc'];
+	CREATE_CRUSHED_ORES.forEach(ore => {
+		event.remove({ type: 'minecraft:smelting', input: ore })
+		event.remove({ type: 'minecraft:blasting', input: ore })
+		event.remove({ type: 'gtceu:electric_furnace', input: ore })
+	});
+
+	// Remove forge hammer crushed_ore → impure_dust auto-generation (clutter)
+	event.remove({ id: /gtceu:forge_hammer\/hammer_.+_crushed_ore_to_impure_dust/ })
 }
 
 function removeMaceratorRecipe(event, id) {

@@ -2416,13 +2416,12 @@ const registerCreateRecipes = (event) => {
 	event.shapeless('create:sand_paper', ['minecraft:paper', 'tfc:glue', '#forge:sand'])
 		.id('tfg:shapeless/sand_paper')
 
-	// The custom ores
-
-	event.smelting('#forge:ingots/copper', 'create:crushed_raw_copper')
-	event.smelting('#forge:ingots/gold', 'create:crushed_raw_gold')
-	event.smelting('#forge:ingots/zinc', 'create:crushed_raw_zinc')
-	event.smelting('gtceu:silver_ingot', 'create:crushed_raw_silver')
-	event.smelting('gtceu:tin_ingot', 'create:crushed_raw_tin')
-	event.smelting('#forge:ingots/lead', 'create:crushed_raw_lead')
+	// The custom ores — smelting is blocked (these are ore intermediates, processed via our chain)
+	// event.smelting('#forge:ingots/copper', 'create:crushed_raw_copper')
+	// event.smelting('#forge:ingots/gold', 'create:crushed_raw_gold')
+	// event.smelting('#forge:ingots/zinc', 'create:crushed_raw_zinc')
+	// event.smelting('gtceu:silver_ingot', 'create:crushed_raw_silver')
+	// event.smelting('gtceu:tin_ingot', 'create:crushed_raw_tin')
+	// event.smelting('#forge:ingots/lead', 'create:crushed_raw_lead')
 
 }
