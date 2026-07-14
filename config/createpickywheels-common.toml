@@ -14,12 +14,12 @@
 		#RPM Penalty for Waterwheels placed on whitelisted but not on preferential biomes [waterwheel_boosted biome tag].
 		#Range: 0.0 ~ 1.7976931348623157E308
 		waterwheelBiomeRPMPenalty = 0.25
-		#STRESS Boost for Waterwheels placed on boosted Biomes.
+		#STRESS Boost for Waterwheels placed on boosted Biomes (river).
 		#Range: 0.0 ~ 1.7976931348623157E308
 		waterwheelBiomeSTRESSBoost = 1.0
-		#STRESS Penalty for Waterwheels placed on whitelisted but not on preferential biomes [waterwheel_boosted biome tag].
+		#STRESS Penalty for Waterwheels placed on whitelisted but not on preferential biomes (non-river).
 		#Range: 0.0 ~ 1.7976931348623157E308
-		waterwheelBiomeSTRESSPenalty = 1.0
+		waterwheelBiomeSTRESSPenalty = 0.5
 
 	#Body of water requirement impact (similar to infinite fluid extraction from pulley)
 	[waterwheels."power source condition"]
@@ -75,8 +75,8 @@
 	windmillMaxRange = 32
 	#The percentage of Generated Speed only given if windmills are raised enough.
 	#Range: 0.0 ~ 1.0
-	windmillAbovePenalty = 0.25
+	windmillAbovePenalty = 0.75
 	#The height required for the full benefit from windmillAbovePenalty.
 	#Range: > 1
-	windmillAbove = 3
+	windmillAbove = 10
 

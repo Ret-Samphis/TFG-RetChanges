@@ -76,6 +76,7 @@ GTCEuStartupEvents.registry('gtceu:material_icon_set', event => {
 GTCEuStartupEvents.materialModification(event => {
 	registerGreateMaterialModification(event)
 	registerTFGMaterialModification(event)
+	registerTFGEarlyPower(event)
 })
 
 GTCEuStartupEvents.registry('gtceu:dimension_marker', event => {
