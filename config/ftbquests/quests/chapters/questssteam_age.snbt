@@ -236,6 +236,7 @@
 			description: ["{quests.steam_age.windmill.desc}"]
 			id: "617E0AFB7BA3D7A8"
 			optional: true
+			shape: "heart"
 			subtitle: "{quests.steam_age.windmill.subtitle}"
 			tasks: [
 				{
