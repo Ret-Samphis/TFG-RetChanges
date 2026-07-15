@@ -1,8 +1,7 @@
 name: "[💡]: Feature request"
 description: "Request a new feature or a new mod."
 title: "[💡]: "
-labels: [ "Status: Backlog" ]
-projects: ["TerraFirmaGreg-Team/10"]
+labels: [ "feature" ]
 type: "Feature"
 
 body:

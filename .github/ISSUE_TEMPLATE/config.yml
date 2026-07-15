@@ -1,13 +1,9 @@
 blank_issues_enabled: false
 contact_links:
-  - name: TerraFirmaGreg Discord
-    url: https://discord.gg/AEaCzCTUwQ
-    about: Join us on Discord to discuss questions, bugs, and more.
-    
-  - name: TerraFirmaGreg CurseForge
-    url: https://www.curseforge.com/minecraft/modpacks/terrafirmagreg-modern
-    about: Download page.
+  - name: TFG-RetChanges Issues
+    url: https://github.com/Ret-Samphis/TFG-RetChanges/issues
+    about: Report issues specific to this fork.
 
-  - name: TerraFirmaGreg YouTube
-    url: https://www.youtube.com/@TFG-modern
-    about: YouTube channel.
+  - name: TerraFirmaGreg-Modern (Original Pack)
+    url: https://github.com/TerraFirmaGreg-Team/Modpack-Modern/issues
+    about: For issues that also exist in the base pack.

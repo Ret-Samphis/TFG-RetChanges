@@ -1,8 +1,7 @@
 name: "[💥]: Crash Report"
 description: "Report a bug that crashes the game or prevents startup."
 title: "[💥]: "
-labels: [ "Status: Backlog" ]
-projects: ["TerraFirmaGreg-Team/10"]
+labels: [ "crash" ]
 type: "Crash"
 
 body:
