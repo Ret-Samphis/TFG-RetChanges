@@ -1,0 +1,18 @@
+# Set the default behavior:
+# On checkout, the line endings will be normalized to the correct one for the OS
+# On commit, the line endings will be reset to lf
+* text=auto
+
+# Binary Files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.jar binary
+
+# GitHub Linguist
+dumps/**/*.* linguist-generated=true
+*.log linguist-generated=true
