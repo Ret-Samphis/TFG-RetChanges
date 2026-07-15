@@ -1,8 +1,7 @@
 name: "[💎]: Enhancement"
 description: "Provide details for a gameplay enhancement or improvement."
 title: "[💎]: "
-labels: [ "Status: Backlog" ]
-projects: ["TerraFirmaGreg-Team/10"]
+labels: [ "enhancement" ]
 type: "Enhancement"
 
 body:

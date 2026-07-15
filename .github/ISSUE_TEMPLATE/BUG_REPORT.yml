@@ -1,8 +1,7 @@
 name: "[🐛]: Bug report"
 description: "Report a bug where something is not working as expected, but does not crash the game."
 title: "[🐛]: "
-labels: [ "Status: Backlog" ]
-projects: ["TerraFirmaGreg-Team/10"]
+labels: [ "bug" ]
 type: "Bug"
 
 body:
@@ -21,7 +20,7 @@ body:
       required: true
     attributes:
       label: "Are you using Prism or Curseforge?"
-      description: "Prism and Curseforge are the only supported launchers for TFG. Some others may not work. TLAUNCHER DOES NOT WORK."
+      description: "Which launcher are you using?"
       options:
         - "Yes, I am using Prism or Curseforge."
         - "No, I am not using Prism or Curseforge."

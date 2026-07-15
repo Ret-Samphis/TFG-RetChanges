@@ -1,7 +1,7 @@
 name: "[❓]: Ask a Question"
 description: "Ask a question regarding this project."
 title: "[❓]: "
-labels: [ "Status: Backlog" ]
+labels: [ "question" ]
 type: "Question"
 
 body:
