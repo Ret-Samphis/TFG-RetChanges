@@ -1,7 +1,50 @@
 # Changelog
+
+## [0.13.3-RetChangesV0.1] - 15-07-2026
+### RetChanges Custom (fork of TerraFirmaGreg-Modern)
+#### New
+- Added `kubejs/server_scripts/retChanges/` — modular recipe overrides for circuits, components, machines, misc, and artisan type adjustments
+- Artisan table wire costs reduced (resin/phenolic boards) via runtime ArtisanType patching
+- New resistor recipes: shaped table + two sequenced assembly variants (cheap kaolinite/graphite and advanced 4x fire_clay/copper_wire)
+- Resin PCB via sequenced assembly (copper wire deploying + glue filling)
+- Phenolic PCB via sequenced assembly (fine silver wire + iron_iii_chloride + pressing)
+- Basic electronic circuit (LV): two sequenced assembly variants (rubber-based phenolic and Woods Metal/soldering alloy)
+- Good electronic circuit (MV): restored 10.7-style sequenced assembly
+- ULV/LV voltage coils via sequenced assembly
+- ULV machine casing/hull via sequenced assembly (Create-centric)
+- LV machine casing via sequenced assembly; LV hull via mechanical crafting
+- Aluminium frame via sequenced assembly
+- LV Assembler, LV Arc Furnace via mechanical crafting
+- Heatproof machine casing, Cupronickel/Kanthal coil blocks via sequenced assembly
+- Deployer shaped recipe + assembler variant (with shaft)
+- Vintage Improvements Laser: re-enabled with shaped recipe; removed from reliable_remover
+- Coin <-> coinstack conversion (all tiers) and cross-tier coin exchange cascade (Zinc↔Copper↔Iron↔Gold)
+- Olive paste via greate milling
+- Aluminium EBF recipe overrides (longer duration, nitrogen gas variant)
+- Bakelite fluid output reduced from 144→36 per mixer operation
+- Removed ULV/LV hull assembler recipes (moved to retChanges)
+- Removed cupronickel/kanthal coil assembler recipes (moved to retChanges)
+
+#### Config
+- Removed `vintageimprovements:laser` and `vintageimprovements:laser_item` from reliable_remover blacklist
+
+#### Early Power Rework
+- Greate capacity scaling: 8x multiplier
+- Water wheel nerf
+- Windmill elevation requirement
+- T0 wooden shaft recipe
+
+#### Quest Book
+- Updated ore progression documentation
+- Updated quest texts for early power rework
+
+#### Infrastructure
+- Rebranded to `TFG-RetChanges` (author: RetSamphis)
+- Pakku-based export tooling (`tools/pakku-export.bat`, `tools/pakku-export.ps1`)
+- Merge planning docs: `changes_vs_base_10.7.md`, `upstream_vs_custom_changes.md`, `MergeChecklist.md`
+- Recipe API reference: `RECIPE_API_REFERENCE.md`
+
 ## Unreleased
-### Changes
-- 
 ### Bug fixes
 - Pale Moss Carpet now acts like a carpet @strangelyng
 

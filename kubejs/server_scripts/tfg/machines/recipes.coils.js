@@ -92,26 +92,13 @@ function registerTFGCoilRecipes(event) {
 		.duration(4 * 20)
 		.EUt(GTValues.VHA[GTValues.LV])
 
-	event.recipes.gtceu.assembler('gtceu:coil_cupronickel')
-		.itemInputs('8x #forge:double_wires/cupronickel', '8x #forge:foils/blue_steel', '4x #forge:ingots/magnesia_refractory_brick')
-		.inputFluids('gtceu:tin_alloy 144')
-		.itemOutputs('gtceu:cupronickel_coil_block')
-		.duration(10 * 20)
-		.EUt(GTValues.VA[GTValues.LV])
-		.addMaterialInfo(true, true)
+	// Cupronickel coil assembler removed — handled by retChanges/recipes.machines.js
 
 	// #endregion
 
 	// #region Kanthal Coil
 
-	event.remove({ id: 'gtceu:assembler/coil_kanthal' })
-	event.recipes.gtceu.assembler('tfg:coil_kanthal')
-		.itemInputs('8x #forge:double_wires/kanthal', '16x #forge:foils/rene_41', '1x #forge:ingots/silicon_carbide')
-		.inputFluids('gtceu:cobalt 144')
-		.itemOutputs('gtceu:kanthal_coil_block')
-		.duration(20 * 15)
-		.EUt(GTValues.VA[GTValues.MV])
-		.addMaterialInfo(true, true)
+	// Kanthal coil assembler removed — handled by retChanges/recipes.machines.js
 
 	// #endregion
 

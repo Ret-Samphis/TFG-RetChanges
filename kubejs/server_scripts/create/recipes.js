@@ -944,27 +944,7 @@ const registerCreateRecipes = (event) => {
 		C: '#forge:rings/wrought_iron'
 	}).id('tfg:create/shaped/super_glue')
 
-	// Deployer
-	event.shaped('create:deployer', [
-		' A ',
-		'DBF',
-		' CE'
-	], {
-		A: '#forge:cogwheels',
-		B: 'create:shadow_steel_casing',
-		C: 'create:brass_hand',
-		D: '#forge:tools/wrenches',
-		E: '#forge:tools/screwdrivers',
-		F: 'create:electron_tube'
-	}).id('tfg:create/shaped/deployer')
-
-	event.recipes.gtceu.assembler('create:deployer')
-		.itemInputs('#forge:cogwheels', 'create:shadow_steel_casing', 'create:brass_hand', 'create:electron_tube')
-		.itemOutputs('create:deployer')
-		.duration(50)
-		.EUt(GTValues.VA[GTValues.ULV])
-		
-	TFGHelpers.registerMaterialInfo('create:deployer', [GTMaterials.Brass, 12/9, GTMaterials.BlackSteel, 1, GTMaterials.Wood, 1]);
+	// Deployer — moved to retChanges/recipes.machines.js
 
 	// Соединятор вагонеток
 	event.shapeless('create:minecart_coupling', [

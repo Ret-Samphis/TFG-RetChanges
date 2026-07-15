@@ -54,7 +54,7 @@ function registerTFGBakeliteRecipes(event) {
 	event.recipes.gtceu.mixer('tfg:bakelite_wood')
 		.inputFluids('tfg:phenolic_resin 144')
 		.itemInputs('tfg:treated_chipboard_composite')
-		.outputFluids('tfg:bakelite 144')
+		.outputFluids('tfg:bakelite 36')
 		.duration(100)
 		.EUt(GTValues.VA[GTValues.LV])
 
@@ -213,19 +213,9 @@ function registerTFGBakeliteRecipes(event) {
 
 	// LV/ULV Hulls
 
-	event.recipes.gtceu.assembler('tfg:ulv_hull_bakelite')
-		.itemInputs('gtceu:ulv_machine_casing', '2x #forge:single_cables/red_alloy')
-		.inputFluids('tfg:bakelite 432')
-		.itemOutputs('gtceu:ulv_machine_hull')
-		.duration(25)
-		.EUt(16)
+	// ULV hull assembler removed — retChanges handles it
 
-	event.recipes.gtceu.assembler('tfg:lv_hull_bakelite')
-		.itemInputs('gtceu:lv_machine_casing', '2x #forge:single_cables/tin')
-		.inputFluids('tfg:bakelite 432')
-		.itemOutputs('gtceu:lv_machine_hull')
-		.duration(50)
-		.EUt(16)
+	// LV hull assembler removed — retChanges handles it
 
 	event.shaped('gtceu:lv_hermetic_casing', [
 		'AAA',

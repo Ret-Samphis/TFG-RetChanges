@@ -84,43 +84,11 @@ function registerTFGElectronicComponentsRecipes(event) {
 		event.custom({ type: 'vintageimprovements:vacuumizing', ingredients: [{ item: 'tfg:unfinished_vacuum_tube' }], results: [{ item: 'tfg:unfinished_vacuum_tube' }], processingTime: 80 })
 	]).transitionalItem('tfg:unfinished_vacuum_tube').loops(1).id('tfg:gtceu/sequenced_assembly/vacuum_tube')
 
-	// ULV Coil
-	event.recipes.createSequencedAssembly([
-		'gtceu:ulv_voltage_coil',
-	], 'gtceu:magnetic_iron_rod', [
-		event.recipes.createDeploying('gtceu:magnetic_iron_rod', ['gtceu:magnetic_iron_rod', '#forge:fine_wires/lead'])
-	]).transitionalItem('gtceu:magnetic_iron_rod').loops(16).id('tfg:sequenced_assembly/ulv_voltage_coil')
+	// ULV Coil — handled by retChanges/recipes.components.js
 
-	// LV basic circuit
-	event.remove({ id: 'gtceu:shaped/electronic_circuit_lv' })
+	// LV basic circuit — handled by retChanges/recipes.circuits.js
 
-	event.recipes.createSequencedAssembly([
-		'gtceu:basic_electronic_circuit',
-	], 'gtceu:resin_printed_circuit_board', [
-		event.recipes.createDeploying('tfg:unfinished_basic_electronic_circuit', ['tfg:unfinished_basic_electronic_circuit', 'gtceu:resistor']),
-		event.recipes.createDeploying('tfg:unfinished_basic_electronic_circuit', ['tfg:unfinished_basic_electronic_circuit', 'gtceu:resistor']),
-		event.recipes.createDeploying('tfg:unfinished_basic_electronic_circuit', ['tfg:unfinished_basic_electronic_circuit', 'gtceu:vacuum_tube']),
-		event.recipes.createDeploying('tfg:unfinished_basic_electronic_circuit', ['tfg:unfinished_basic_electronic_circuit', 'gtceu:vacuum_tube']),
-		event.recipes.createDeploying('tfg:unfinished_basic_electronic_circuit', ['tfg:unfinished_basic_electronic_circuit', 'create:electron_tube']),
-		event.recipes.createFilling('tfg:unfinished_basic_electronic_circuit', ['tfg:unfinished_basic_electronic_circuit', Fluid.of('gtceu:glue', 50)]),
-		event.recipes.createDeploying('tfg:unfinished_basic_electronic_circuit', ['tfg:unfinished_basic_electronic_circuit', '#forge:plates/steel']),
-	]).transitionalItem('tfg:unfinished_basic_electronic_circuit').loops(1).id('tfg:gtceu/sequenced_assembly/basic_electronic_circuit')
-
-	// MV basic circuit
-	event.remove({ id: 'gtceu:shaped/electronic_circuit_mv' })
-
-	event.recipes.createSequencedAssembly([
-		'gtceu:good_electronic_circuit',
-	], 'gtceu:phenolic_printed_circuit_board', [
-		event.recipes.createDeploying('tfg:unfinished_good_electronic_circuit', ['tfg:unfinished_good_electronic_circuit', 'gtceu:diode']),
-		event.recipes.createDeploying('tfg:unfinished_good_electronic_circuit', ['tfg:unfinished_good_electronic_circuit', 'gtceu:diode']),
-		event.recipes.createDeploying('tfg:unfinished_good_electronic_circuit', ['tfg:unfinished_good_electronic_circuit', '#forge:single_wires/copper']),
-		event.recipes.createDeploying('tfg:unfinished_good_electronic_circuit', ['tfg:unfinished_good_electronic_circuit', '#forge:single_wires/copper']),
-		event.recipes.createDeploying('tfg:unfinished_good_electronic_circuit', ['tfg:unfinished_good_electronic_circuit', 'gtceu:basic_electronic_circuit']),
-		event.recipes.createDeploying('tfg:unfinished_good_electronic_circuit', ['tfg:unfinished_good_electronic_circuit', 'gtceu:basic_electronic_circuit']),
-		event.recipes.createDeploying('tfg:unfinished_good_electronic_circuit', ['tfg:unfinished_good_electronic_circuit', 'gtceu:basic_electronic_circuit']),
-		event.recipes.createDeploying('tfg:unfinished_good_electronic_circuit', ['tfg:unfinished_good_electronic_circuit', '#forge:plates/steel']),
-	]).transitionalItem('tfg:unfinished_good_electronic_circuit').loops(1).id('tfg:gtceu/sequenced_assembly/good_electronic_circuit')
+	// MV basic circuit — removed, handled by retChanges/recipes.circuits.js
 
 	// Vitrified Pearl
 	event.recipes.gtceu.shaped('gtceu:mv_field_generator', [

@@ -1,9 +1,9 @@
 {
-    "name": "TerraFirmaGreg-Modern",
+    "name": "TFG-RetChanges",
     "version": "0.13.3-RetChangesV0.1",
-    "release_type": "release",
-    "description": "An innovative modpack that contains GregTech and TerraFirmaCraft on 1.20.x.",
-    "author": "Exception, Xikaro",
+    "release_type": "alpha",
+    "description": "A fork of TerraFirmaGreg-Modern that integrates Create more deeply with early GregTech. All credit to the original authors: Exception, Xikaro, and the TerraFirmaGreg Team (https://www.curseforge.com/minecraft/modpacks/terrafirmagreg-modern). This pack is just a fork — it builds on their incredible work.",
+    "author": "RetSamphis",
     "overrides": [
         "config",
         "defaultconfigs",
