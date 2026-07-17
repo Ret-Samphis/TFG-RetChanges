@@ -292,10 +292,6 @@ ServerEvents.recipes(event => {
 	registerRetChangeMachineRecipes(event)
 })
 
-PlayerEvents.loggedIn(event => {
-	registerDailyLoginEvent(event)
-})
-
 TaCZServerEvents.gunIndexLoad((event) => {
 	gunIndexLogic(event)
 })
