@@ -26,31 +26,27 @@ const registerRetChangeMachineRecipes = (event) => {
 
 	event.remove({ output: 'gtceu:ulv_machine_hull' })
 
-	// Old 10.7 custom recipe
 	inter = 'gtceu:ulv_machine_casing'
 	event.recipes.createSequencedAssembly([
 		'gtceu:ulv_machine_hull'
 	], 'gtceu:ulv_machine_casing', [
-		event.recipes.createDeploying(inter, [inter, 'gtceu:vacuum_tube']),
-		event.recipes.createDeploying(inter, [inter, '#forge:double_plates/lead']),
-		event.recipes.createDeploying(inter, [inter, 'gtceu:black_steel_screw']),
-		event.recipes.createDeploying(inter, [inter, '#forge:double_plates/lead']),
-		event.recipes.createDeploying(inter, [inter, 'gtceu:black_steel_screw']),
+		event.recipes.createFilling(inter, [inter, Fluid.of('tfg:bakelite', 144)]),
+		event.recipes.createDeploying(inter, [inter, '#gtceu:circuits/ulv']),
+		event.recipes.createDeploying(inter, [inter, '#forge:plates/lead']),
+		event.recipes.createDeploying(inter, [inter, '#forge:plates/lead']),
 		event.recipes.greate.pressing(inter, inter)
-	]).transitionalItem(inter).loops(3).id('tfg:ret/sequenced_assembly/ulv_machine_hull_old')
+	]).transitionalItem(inter).loops(3).id('tfg:ret/sequenced_assembly/ulv_machine_hull_bakelite')
 
-	// New recipe
-	inter = 'gtceu:ulv_machine_casing'
 	event.recipes.createSequencedAssembly([
 		'gtceu:ulv_machine_hull'
 	], 'gtceu:ulv_machine_casing', [
 		event.recipes.createDeploying(inter, [inter, '#gtceu:circuits/ulv']),
-		event.recipes.createDeploying(inter, [inter, '#forge:plates/lead']),
-		event.recipes.createFilling(inter, [inter, Fluid.of('tfg:bakelite', 50)]),
-		event.recipes.createDeploying(inter, [inter, '#forge:plates/lead']),
-		event.recipes.createFilling(inter, [inter, Fluid.of('tfg:bakelite', 50)]),
+		event.recipes.createDeploying(inter, [inter, '#forge:double_plates/lead']),
+		event.recipes.createDeploying(inter, [inter, 'gtceu:black_steel_screw']),
+		event.recipes.createDeploying(inter, [inter, '#forge:double_plates/lead']),
+		event.recipes.createDeploying(inter, [inter, 'gtceu:black_steel_screw']),
 		event.recipes.greate.pressing(inter, inter)
-	]).transitionalItem(inter).loops(3).id('tfg:ret/sequenced_assembly/ulv_machine_hull')
+	]).transitionalItem(inter).loops(3).id('tfg:ret/sequenced_assembly/ulv_machine_hull_double_plate')
 
 	// #endregion
 
@@ -167,6 +163,206 @@ const registerRetChangeMachineRecipes = (event) => {
 		J: 'gtceu:lv_electric_pump',
 		K: 'gtceu:lv_input_hatch'
 	}).id('tfg:ret/mechanical_crafting/lv_arc_furnace')
+
+	// #endregion
+
+	// #region LV Autoclave
+
+	event.remove({ output: 'gtceu:lv_autoclave' })
+	event.remove({ id: 'gtceu:shaped/lv_autoclave' })
+
+	event.recipes.create.mechanical_crafting('gtceu:lv_autoclave', [
+		'SHS',
+		'SBS',
+		'CPC'
+	], {
+		S: 'gtceu:steel_plate',
+		H: 'gtceu:lv_machine_hull',
+		B: 'minecraft:bucket',
+		C: '#gtceu:circuits/lv',
+		P: 'gtceu:lv_electric_pump'
+	}).id('tfg:ret/mechanical_crafting/lv_autoclave')
+
+	// #endregion
+
+	// #region LV Brewery
+
+	event.remove({ output: 'gtceu:lv_brewery' })
+	event.remove({ id: 'gtceu:shaped/lv_brewery' })
+
+	event.recipes.create.mechanical_crafting('gtceu:lv_brewery', [
+		'GHG',
+		'TBT',
+		'CPC'
+	], {
+		G: 'minecraft:glass',
+		H: 'gtceu:lv_machine_hull',
+		T: 'gtceu:tin_single_cable',
+		B: '#tfc:glass_bottles',
+		C: '#gtceu:circuits/lv',
+		P: 'gtceu:lv_electric_pump'
+	}).id('tfg:ret/mechanical_crafting/lv_brewery')
+
+	// #endregion
+
+	// #region LV Polarizer
+
+	event.remove({ output: 'gtceu:lv_polarizer' })
+	event.remove({ id: 'gtceu:shaped/lv_polarizer' })
+
+	event.recipes.create.mechanical_crafting('gtceu:lv_polarizer', [
+		'RHB',
+		'MAM',
+		'BTR'
+	], {
+		R: 'gtceu:red_steel_rod',
+		H: 'gtceu:lv_machine_hull',
+		B: 'gtceu:blue_steel_rod',
+		M: 'gtceu:magnetic_iron_plate',
+		A: '#tfc:magnetic_rocks',
+		T: 'gtceu:double_tin_plate'
+	}).id('tfg:ret/mechanical_crafting/lv_polarizer')
+
+	// #endregion
+
+	// #region LV Chemical Bath
+
+	event.remove({ output: 'gtceu:lv_chemical_bath' })
+	event.remove({ id: 'gtceu:shaped/lv_chemical_bath' })
+
+	event.recipes.create.mechanical_crafting('gtceu:lv_chemical_bath', [
+		'GHG',
+		'CTC',
+		'LPL'
+	], {
+		G: 'minecraft:glass',
+		H: 'gtceu:lv_machine_hull',
+		C: 'gtceu:lv_conveyor_module',
+		T: 'create:fluid_tank',
+		L: '#gtceu:circuits/lv',
+		P: 'gtceu:lv_electric_pump'
+	}).id('tfg:ret/mechanical_crafting/lv_chemical_bath')
+
+	// #endregion
+
+	// #region LV Distillery
+
+	event.remove({ output: 'gtceu:lv_distillery' })
+	event.remove({ id: 'gtceu:shaped/lv_distillery' })
+
+	event.recipes.create.mechanical_crafting('gtceu:lv_distillery', [
+		'GHG',
+		'CSC',
+		'PUP'
+	], {
+		G: 'minecraft:glass',
+		H: 'gtceu:lv_machine_hull',
+		C: '#gtceu:circuits/lv',
+		S: 'gtceu:copper_spring',
+		P: 'gtceu:copper_small_fluid_pipe',
+		U: 'gtceu:lv_electric_pump'
+	}).id('tfg:ret/mechanical_crafting/lv_distillery')
+
+	// #endregion
+
+	// #region LV Electromagnetic Separator
+
+	event.remove({ output: 'gtceu:lv_electromagnetic_separator' })
+	event.remove({ id: 'gtceu:shaped/lv_electromagnetic_separator' })
+
+	event.recipes.create.mechanical_crafting('gtceu:lv_electromagnetic_separator', [
+		'BHR',
+		'MDM',
+		'LCT'
+	], {
+		B: 'gtceu:blue_steel_rod',
+		H: 'gtceu:lv_machine_hull',
+		R: 'gtceu:red_steel_rod',
+		M: 'gtceu:magnetic_iron_rod',
+		D: 'create:depot',
+		L: '#gtceu:circuits/lv',
+		C: 'gtceu:lv_conveyor_module',
+		T: 'gtceu:tin_single_cable'
+	}).id('tfg:ret/mechanical_crafting/lv_electromagnetic_separator')
+
+	// #endregion
+
+	// #region LV Ore Washer
+
+	event.remove({ output: 'gtceu:lv_ore_washer' })
+	event.remove({ id: 'gtceu:shaped/lv_ore_washer' })
+
+	event.recipes.create.mechanical_crafting('gtceu:lv_ore_washer', [
+		'GHG',
+		'TFT',
+		'LVL'
+	], {
+		G: 'minecraft:glass',
+		H: 'gtceu:lv_machine_hull',
+		T: 'gtceu:tin_rotor',
+		F: 'create:fluid_tank',
+		L: '#gtceu:circuits/lv',
+		V: 'gtceu:lv_conveyor_module'
+	}).id('tfg:ret/mechanical_crafting/lv_ore_washer')
+
+	// #endregion
+
+	// #region LV Combustion Generator
+
+	event.remove({ output: 'gtceu:lv_combustion' })
+	event.remove({ id: 'gtceu:shaped/lv_combustion' })
+
+	event.recipes.create.mechanical_crafting('gtceu:lv_combustion', [
+		'PHP',
+		'MSM',
+		'GCG'
+	], {
+		P: 'gtceu:lv_electric_piston',
+		H: 'gtceu:lv_machine_hull',
+		M: 'gtceu:lv_electric_motor',
+		S: 'gtceu:long_steel_rod',
+		G: 'gtceu:steel_gear',
+		C: '#gtceu:circuits/lv'
+	}).id('tfg:ret/mechanical_crafting/lv_combustion')
+
+	// #endregion
+
+	// #region LV Steam Turbine
+
+	event.remove({ output: 'gtceu:lv_steam_turbine' })
+	event.remove({ id: 'gtceu:shaped/steam_turbine_lv' })
+	event.remove({ id: 'tfg:shaped/steam_turbine_lv' })
+
+	event.recipes.create.mechanical_crafting('gtceu:lv_steam_turbine', [
+		'PHP',
+		'CLC',
+		'MSM'
+	], {
+		P: 'gtceu:steel_huge_fluid_pipe',
+		H: 'gtceu:lv_machine_hull',
+		C: 'gtceu:cobalt_brass_rotor',
+		L: '#gtceu:circuits/lv',
+		M: 'gtceu:lv_electric_motor',
+		S: 'gtceu:long_steel_rod'
+	}).id('tfg:ret/mechanical_crafting/lv_steam_turbine')
+
+	// #endregion
+
+	// #region LV Gas Turbine
+
+	event.remove({ output: 'gtceu:lv_gas_turbine' })
+	event.remove({ id: 'gtceu:shaped/lv_gas_turbine' })
+
+	event.recipes.create.mechanical_crafting('gtceu:lv_gas_turbine', [
+		'RHR',
+		'MCM',
+		'RCR'
+	], {
+		R: 'gtceu:tin_rotor',
+		H: 'gtceu:lv_machine_hull',
+		M: 'gtceu:lv_electric_motor',
+		C: '#gtceu:circuits/lv'
+	}).id('tfg:ret/mechanical_crafting/lv_gas_turbine')
 
 	// #endregion
 

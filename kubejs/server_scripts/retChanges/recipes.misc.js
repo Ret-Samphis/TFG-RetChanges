@@ -58,4 +58,37 @@ const registerRetChangeMiscRecipes = (event) => {
 
 	// #endregion
 
+	// #region Greate milling additions
+
+	event.recipes.greate.milling('3x minecraft:bone_meal', 'minecraft:bone')
+		.id('tfg:ret/milling/bone_to_bonemeal')
+
+	event.recipes.greate.milling('gtceu:charcoal_dust', 'minecraft:charcoal')
+		.id('tfg:ret/milling/charcoal_to_dust')
+
+	// #endregion
+
+	// #region Barrel lubricant
+
+	event.recipes.tfc.barrel_sealed(28800)
+		.inputItem('minecraft:redstone')
+		.inputFluid(Fluid.of('gtceu:seed_oil', 100))
+		.outputFluid(Fluid.of('gtceu:lubricant', 10))
+		.id('tfg:ret/barrel/lubricant')
+
+	// #endregion
+
+	// #region Reinforced rubber belt
+
+	event.recipes.greate.compacting('ret:reinforced_rubber_belt', [
+		'gtceu:rubber_plate', 'gtceu:rubber_plate', 'gtceu:rubber_plate',
+		'gtceu:rubber_plate', 'gtceu:rubber_plate', 'gtceu:rubber_plate',
+		'gtceu:fine_steel_wire', 'gtceu:fine_steel_wire', 'gtceu:fine_steel_wire', 'gtceu:fine_steel_wire',
+		'sns:reinforced_fabric'
+	])
+		.recipeTier(1)
+		.id('tfg:ret/compacting/reinforced_rubber_belt')
+
+	// #endregion
+
 }

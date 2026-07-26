@@ -282,6 +282,20 @@ function registerGTCEuMachineRecipes(event) {
 	}).addMaterialInfo().id('gtceu:shaped/coke_oven_hatch')
 	//#endregion
 
+	// Steel Brick Casing (HP Steam Machine casing)
+
+	event.remove({ output: 'gtceu:steel_brick_casing' })
+	event.recipes.gtceu.shaped('gtceu:steel_brick_casing', [
+		'AAA',
+		'BCB',
+		'DDD'
+	], {
+		A: ChemicalHelper.get(TagPrefix.plateDouble, GTMaterials.Steel, 1),
+		B: ChemicalHelper.get(TagPrefix.pipeSmallFluid, GTMaterials.TinAlloy, 1),
+		C: ChemicalHelper.get(TagPrefix.gear, GTMaterials.BlackSteel, 1),
+		D: 'tfc:fire_bricks'
+	}).addMaterialInfo().id('tfg:ret/shaped/steel_brick_casing')
+
 	// HP Steam Boilers
 	removeMaceratorRecipe(event, 'macerate_hp_steam_solid_boiler')
 	event.recipes.gtceu.shaped('gtceu:hp_steam_solid_boiler', [
@@ -909,19 +923,6 @@ function registerGTCEuMachineRecipes(event) {
 
 	event.remove({ id: 'gtceu:shaped/steam_turbine_lv' })
 	removeMaceratorRecipe(event, 'macerate_lv_steam_turbine')
-
-	event.recipes.gtceu.shaped('gtceu:lv_steam_turbine', [
-		'BAB',
-		'CDC',
-		'EFE'
-	], {
-		A: '#gtceu:circuits/lv',
-		B: '#forge:huge_fluid_pipes/steel',
-		C: '#forge:rotors/cobalt_brass',
-		D: 'gtceu:lv_machine_hull',
-		E: 'gtceu:lv_electric_motor',
-		F: '#forge:single_cables/tin'
-	}).addMaterialInfo().id('tfg:shaped/steam_turbine_lv')
 
 	event.remove({ id: 'gtceu:shaped/steam_turbine_mv' })
 	removeMaceratorRecipe(event, 'macerate_mv_steam_turbine')
